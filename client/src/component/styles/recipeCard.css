@@ -26,8 +26,18 @@
     align-items: center;
     
 }
+li{
+    list-style: none;
+}
 .diets{
-    justify-content: space-evenly;
-    font-size: 13px;
-    font-family: sans-serif;
+    background-color:  rgb(94, 173, 14);
+    opacity: 0.9;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding: 6px;
+    display: inline-flex;
+    margin-right: 10px;
+    font-size: 12px;
+    
 }

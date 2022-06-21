@@ -8,7 +8,7 @@ return(
     <nav className="Navegador">
         <div>
     <Link className='LinkInicio'to='/'>Inicio</Link>
-    <Link className='LinkHome'to='/home'>Recetas</Link>
+    
     <Link className='LinkCreate'to='/create'>Crear Receta</Link>
     </div>
     </nav>

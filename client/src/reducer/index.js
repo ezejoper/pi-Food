@@ -37,7 +37,7 @@ export default function rootReducer(state = initialState, action){
                     allRecipes: dietFiltered
                 }
         case ORDER_BY_TITLE:
-            const orderReciperTitle= action.payload === 'Asc' ?
+            const orderReciperTitle= action.payload === 'Asc'  ?
                 state.allRecipes.sort(function(a , b) {
                     if(a.title.toLowerCase() > b.title.toLowerCase()){
                         return 1
@@ -45,6 +45,7 @@ export default function rootReducer(state = initialState, action){
                     if(b.title.toLowerCase() > a.title.toLowerCase()){
                         return -1
                     }
+                    
                     return 0
                 }) : state.allRecipes.sort(function(a,b){
                     if(a.title.toLowerCase() > b.title.toLowerCase()){

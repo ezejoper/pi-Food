@@ -58,20 +58,20 @@ function handleFilterForDiet(e){
     e.preventDefault()
 }
 return(
-    <div>
+    <div className="bodyHome">
         <NavBar/>
         <SearchBar/>
         <Header/>
         
         <div className="filterConteiner">
         <select className="SelectOrderTitle" onChange={e=>handleOrderByTitle(e)}>
-        <option>Selecciones el Orden</option>
+        <option>Seleccione el Orden</option>
         <option value='Asc'>A - Z</option>
         <option value='Desc'>Z - A</option>
         </select>
 
         <select className="SelectOrderPoint" onChange={e=>handleOrderByPoint(e)}>
-        <option value=''>Seleccione el orden</option>
+        <option value=''>Seleccione por puntos</option>
         <option value='HealthScorePointMax'>Puntaje Max</option>
         <option value='HealthScorePointMin'>Puntaje Min</option>
         </select>

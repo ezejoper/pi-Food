@@ -1,5 +1,4 @@
 import React from "react"
-import imagecook from '../Imagen/cook.png'
 import './styles/Header.css'
 export default function Header() {
 	return (

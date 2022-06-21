@@ -11,10 +11,13 @@ import Imagenc from '../Imagen/cocina.png'
 
 function validate(post) {
     const errors = {};
-    if (!post.title) errors.title = 'Please complete with a recipe name';
-    if(post.title.length > 45 ) errors.title='Your Recipes name is too long'
-    if (!post.summary) errors.summary = 'Please add some comments about your recipe';
-    if (!post.steps) errors.steps = 'Please detail the steps for your recipe';
+    if (!post.title) errors.title = 'Complete con un nombre de receta';
+    if(post.title.length > 45 ) errors.title='El nombre de su receta es muy largo'
+    if (!post.summary) errors.summary = 'Por favor agregue un comentario';
+    if(post.image && ! /[(http(s)?)://(www.)?a-zA-Z0-9@:%.+~#=]{2,256}.[a-z]{2,6}\b([-a-zA-Z0-9@:%+.~#?&//=]*)/.test(post.image)){
+        errors.image = 'You must enter a valid URL for the recipe image.'
+    }
+    if (!post.steps) errors.steps = 'Por favor detalle los pasos para su receta';
     return errors;
 };
 export default function RecipeCreate(){
@@ -128,11 +131,12 @@ export default function RecipeCreate(){
                 <div className="Steps">
                     <label className="instrucciones">Instrucciones</label>
                     <textarea className="StepInput" type='text' value={post.steps} name='steps'onChange={e=>handleInputChange(e)}/>
-                    {errors.instructions && (<p className='error'>{errors.instructions}</p>)}
+                    {errors.steps && (<p className='error'>{errors.steps}</p>)}
                 </div>
                 <div className="Imagen">
                     <label className="ImgUrl">Agregue una Imagen</label>
                     <input className="InputImagen" type='url' value={post.image} name='image' onChange={e=>handleInputChange(e)}/>
+                    {errors.image && (<p className='errorimg'>{errors.image}</p>)}
                 </div>
                 <div className="DietSelect">
                     <select className="selectDiet" onChange={e=>handleSelect(e)}>
@@ -143,8 +147,10 @@ export default function RecipeCreate(){
                                 
                             {post.diets.map(diet => 
                             <div className='selectedDiets'>
+                                <div className="listita">
                                 <p className="dietname">{allDiets?.find(element => element.id === diet)?.name}</p>
-                                <button className="botondelete" onClick={e=>handleDelete(e)}>Eliminar</button>
+                                <button className="botondelete" onClick={e=>handleDelete(e)}>x</button>
+                                </div>
                             </div>
                             )}
                         
