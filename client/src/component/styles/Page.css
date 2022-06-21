@@ -1,0 +1,45 @@
+.Paginadox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.inputNum {
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    border: 1px solid #242424;
+    border-radius: 3px;
+}
+button {
+    background: none;
+    border: 2px solid;
+    padding: 1em 2em;
+    border-radius: 3px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.35s;
+}
+button[disabled] {
+    background-color: #414442;
+    cursor: no-drop;
+}
+
+.btn-slid{
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn-slid:hover, .btn-slide:focus{
+    border-color: rgb(94, 173, 14);;
+    color: #000;
+    box-shadow: inset 10em 0 0 0 rgb(94, 173, 14);
+}
+.btn-slid[disabled]{
+    box-shadow: none;
+    border-color: black
+}

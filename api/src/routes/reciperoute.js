@@ -48,7 +48,7 @@ router.get('/:idRecipe', async(req,res)=>{
 
 router.post('/',async(req,res)=>{
     try{
-        const { title, summary, healthScore, steps, image}= req.body
+        const { title, summary, healthScore, steps, image, diets}= req.body
 
         const CreateRecipe = await Recipe.create({
             title:title,
@@ -56,8 +56,10 @@ router.post('/',async(req,res)=>{
             healthScore: healthScore,
             steps:steps,
             image:image,
+
         
         })
+        await diets.map(d=>CreateRecipe.addDiet(d))
         res.status(200).send('akdjalkdjal')
         return CreateRecipe
     }

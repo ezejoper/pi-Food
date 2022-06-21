@@ -1,0 +1,68 @@
+.Conteiner{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: 600px;
+    /* grid-auto-columns: 300px 100px; */
+    margin-left: 100px;
+    text-decoration: none;
+}
+.filterConteiner{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.linkHome{
+    width: 26rem;
+    height: 56vh;
+    margin-top: 1rem 2px 1rem 2px;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+a:hover {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    transform: translateY(-4%);
+}
+img{
+    width: 18rem;
+    height: 200;
+    border-radius: 10px;
+    margin-top: 40px;
+    
+    justify-content: center;
+}
+
+
+
+select{
+    background-color: rgb(94, 173, 14);
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    border-radius: 10px;
+    font-weight: bold;
+    
+    
+}
+
+option[enabled]{
+    background-color: azure;
+}
+.filterConteiner{
+    width: 100%;
+    margin-bottom: 40px;
+}
+/* .SelectOrderPoint{
+    margin-left: 100px;
+    
+} */
+
+h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}

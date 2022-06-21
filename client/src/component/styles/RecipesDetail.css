@@ -1,0 +1,67 @@
+.detailconteiner{
+    background-color: rgb(239, 234, 234);
+    opacity: 0.9;
+    margin: 50px;
+    border-radius: 20px;
+}
+.titlerecipe{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+.Summary{
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 20px;
+    
+}
+.imgd{
+    display: flex;
+    justify-content: center;
+}
+.imagend{
+width: 400px  !important ;
+height: 300px;
+
+}
+.salud{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+.numsalud{
+    text-align: center;
+    margin-top: 50px;
+    
+    font-size: 30px;
+}
+.diet{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+.diettype{
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    
+    font-size: 20px;
+}
+.stepin{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+.inst{
+    text-align: center;
+    margin-top: 30px;
+   padding-bottom: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}

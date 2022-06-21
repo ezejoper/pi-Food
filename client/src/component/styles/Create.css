@@ -1,0 +1,121 @@
+.FormConteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(239, 234, 234);
+	border-radius: 10px;
+    margin: 0px;
+	/* overflow: hidden; */
+    opacity: 0.9;
+    
+}
+.InputReceta{
+    margin-top: 20px;
+}
+textarea{
+    align-items: center;
+    justify-content: center;
+    height: 100px!important;
+    width: 200% !important;
+    opacity: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.puntuacionnum{
+    text-align: center;
+    
+}
+.InputPuntacion{
+    height: 20px;
+    width: 100%;
+    background-color: #8fea9e;
+    border-radius: 50px;
+    -webkit-appearance: none;
+    
+}
+    .InputPuntacion :-moz-range-thumb {
+    width: 25px;
+    height: 30px;
+    background-color: #d4a0a0;
+    border-radius: 50%;
+    border: 0;
+    }
+.Resumen{
+    display:inline-block;
+    margin-top: 10px ;
+    padding-right: 200px;
+}
+
+.TituloResumen{
+   
+    justify-content: center;
+    text-align:center ;
+    align-items: center;
+}
+.selectDiet{
+    margin: 15px 0 10px;
+}
+
+.submitButton:hover, .submitButton:focus{
+    border-color: rgb(94, 173, 14);;
+    color: #000;
+    box-shadow: inset 10em 0 0 0 rgb(94, 173, 14);
+}
+.volverboton{
+    margin: 10px;
+    padding: 20px 30px 20px;
+}
+.volverboton:hover, .volverboton:focus{
+    border-color: rgb(94, 173, 14);;
+    color: #000;
+    box-shadow: inset 10em 0 0 0 rgb(94, 173, 14);
+   
+}
+
+.errortitle{
+    justify-content: center;
+    text-align:center ;
+    align-items: center;
+    color: red;
+}
+.errorResumen{
+    justify-content: center;
+    text-align:center ;
+    align-items: center;
+    color: red;
+
+}
+.Puntacion{
+    
+    justify-content: center;
+    text-align:center ;
+    align-items: center;
+}
+
+.selectedDiets{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: start;
+    
+}
+ .botondelete{
+    margin-top: 10px;
+    margin-left: 30px;
+    padding: 2px;
+    padding-top: 1px;
+
+ }
+ .botondelete:hover, .botondelete:focus{
+    border-color: rgb(0, 1, 0);;
+    color: #000;
+    box-shadow: inset 10em 0 0 0 rgb(255, 9, 9);
+   
+}
+
+
+.Steps{
+    display:inline-block;
+    margin-top: 10px ;
+    padding-right: 200px;
+}

@@ -7,11 +7,13 @@ sequelize.define('diet', {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
     allowNull: false,
-    primaryKey: true
+    primaryKey: true,
+    
     },
     name: {
     type: DataTypes.STRING,
     allowNull: false,
+    unique:true
     },
 },{timestamps: false});
 };

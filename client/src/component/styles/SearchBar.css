@@ -1,0 +1,39 @@
+.searchBarConteiner{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 0%;
+    /* background-color: rgb(249, 247, 247); */
+    height: 20px;
+    margin-bottom: 20px;
+    padding: 14px 0px 25px;
+    background-color: black;
+    opacity: 0.8;
+}
+.inputSearch{
+    background-color:aliceblue;
+    width: 340px;
+    height: 35.8px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.boton{
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(163, 176, 166);
+    font-style: normal;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.boton:hover{
+    background-color: rgb(94, 173, 14);
+    cursor: pointer;
+}

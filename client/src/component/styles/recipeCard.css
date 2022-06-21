@@ -1,0 +1,33 @@
+.Card{
+    display: flex;
+    flex-direction: column;
+    width: 26rem;
+    height: 56vh;
+    align-items: center;
+    border-width: 0.2rem;
+    background-size: cover;
+    background-image: url(https://badgut.org/wp-content/uploads/Image-Content-IBS-the-foods-you-can-eat.png);
+   
+    border-radius: 15px;
+    margin-top: 1rem 2px 1rem 2px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    
+}
+
+
+
+.imagen{
+    width: 20rem;
+    height: 200px;
+    border-radius: 20px;
+}
+.title{
+    font-size: 25px;
+    align-items: center;
+    
+}
+.diets{
+    justify-content: space-evenly;
+    font-size: 13px;
+    font-family: sans-serif;
+}

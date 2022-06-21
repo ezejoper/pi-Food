@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { dietPreload } = require('../contollers/diets');
 const { DietList } = require('../contollers/diets')
 const router = Router();
-const { Diet }= require('../db')
+
 // const { dietPreload }=require('../contollers/diets')
 
 

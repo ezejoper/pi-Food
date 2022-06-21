@@ -20,6 +20,9 @@ module.exports = (sequelize) => {
       type:DataTypes.STRING(1000),
       allowNull:false
     },
+    spoonacularScore:{
+      type: DataTypes.INTEGER
+    },
     healthScore:{
       type: DataTypes.INTEGER
     },
@@ -29,7 +32,6 @@ module.exports = (sequelize) => {
     image:{
       type: DataTypes.STRING
     },
-    // spoonacularScore:{
-    // type: DataTypes.INTEGER}
+    
   },{timestamps: false});
 };

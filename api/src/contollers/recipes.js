@@ -58,7 +58,7 @@ const searchByIdAtApi = async(id)=>{
             id: e.id,
             title: e.title,
             image: e.image,
-            summary: e.summary,
+            summary: e.summary.replace(/<(“[^”]”|'[^’]’|[^'”>])*>/g, ''),
             spoonacularScore: e.spoonacularScore,
             healthScore: e.healthScore,
             diets: e.diets.map(each => ({ name: each })),

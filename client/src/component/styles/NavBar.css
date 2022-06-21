@@ -1,0 +1,47 @@
+.Navegador{
+    float: left;
+    padding:17px 0px 24px;
+	padding-right: 16px;
+    background-color: black;
+    opacity: 0.8;
+    color: aliceblue;
+
+}
+
+.LinkHome{
+    
+    
+    padding: 10px;
+    color: aliceblue;
+    margin-right:  20px;
+    
+    
+}
+.LinkHome:hover{
+    cursor: pointer;
+    background-color: rgb(94, 173, 14);
+}
+.LinkCreate{
+    padding: 10px;
+    color: aliceblue;
+    margin-right:  20px;
+
+}
+.LinkCreate:hover{
+    cursor: pointer;
+    background-color: rgb(94, 173, 14);
+}
+Link :hover{
+    cursor: pointer;
+    background-color: rgb(94, 173, 14);
+    
+}
+.LinkInicio{
+    padding: 10px;
+    color: aliceblue;
+    margin-right:  20px;
+}
+.LinkInicio:hover{
+    cursor: pointer;
+    background-color: rgb(94, 173, 14);
+}
