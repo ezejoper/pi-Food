@@ -5,17 +5,19 @@ import { getDiets, postRecipes } from "../actions";
 import { useEffect } from "react";
 import {  Link, useHistory } from "react-router-dom";
 import './styles/Create.css'
-import Imagenc from '../Imagen/cocina.png'
+
 
 
 
 function validate(post) {
     const errors = {};
+    
     if (!post.title) errors.title = 'Complete con un nombre de receta';
+    
     if(post.title.length > 45 ) errors.title='El nombre de su receta es muy largo'
     if (!post.summary) errors.summary = 'Por favor agregue un comentario';
     if(post.image && ! /[(http(s)?)://(www.)?a-zA-Z0-9@:%.+~#=]{2,256}.[a-z]{2,6}\b([-a-zA-Z0-9@:%+.~#?&//=]*)/.test(post.image)){
-        errors.image = 'You must enter a valid URL for the recipe image.'
+        errors.image = 'Ingrese una URL valida'
     }
     if (!post.steps) errors.steps = 'Por favor detalle los pasos para su receta';
     return errors;
@@ -42,12 +44,15 @@ export default function RecipeCreate(){
     })
 
     function handleSelect(e){
-        setPost({
+        if(post.diets.includes(e.target.value)){
+            return 'Diet Type exists'
+        }else{
+            setPost({
             ...post,
             diets: [...post.diets, e.target.value]
         })
     }
-
+    }
     function handleInputChange(e){
         setPost({
             ...post,
