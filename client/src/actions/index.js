@@ -6,12 +6,13 @@ export const GET_DIETS= 'GET_DIETS'
 export const ORDER_BY_TITLE= 'ORDER_BY_TITLE'
 export const ORDER_BY_POINTS='ORDER_BY_POINTS'
 export const FILTER_BY_DIETS="FILTER_BY_DIETS"
+export const RETURN_ORDER='RETURN_ORDER'
 // const LocalHost= 'http://localhost:3000/'
 
 export function getAllRecipes(){
 
     return async function(dispatch){
-        axios.get("http://localhost:3001/recipes")
+        axios.get("/recipes")
         .then(res => {
             dispatch({ type: GET_ALL_RECIPES, 
                 payload:res.data})
@@ -22,7 +23,7 @@ export function getAllRecipes(){
 export function getDiets(){
     return async function(dispatch){
         try {
-            var json = await axios.get("http://localhost:3001/diets")
+            var json = await axios.get("/diets")
             return dispatch({
                 type: GET_DIETS,
                 payload: json.data
@@ -36,13 +37,15 @@ export function getDiets(){
 export function searchRecipe(name){
     return async function(dispatch){
         try{
-            var res= await axios.get(`http://localhost:3001/recipes?name=${name}`)
+            var res= await axios.get(`/recipes?name=${name}`)
             return dispatch({
-                type: 'SEARCH_RECIPES',
+                type: SEARCH_RECIPES,
                 payload: res.data
             })
         } catch(error){
-            console.log(error)
+            dispatch({
+                type: SEARCH_RECIPES,
+                payload: [] })
         }
     }}
 
@@ -50,7 +53,7 @@ export function searchRecipe(name){
 export function getrecipeDetail(id){
         return async function(dispatch){
         try{
-            var res=await axios.get(`http://localhost:3001/recipes/${id}`)
+            var res=await axios.get(`/recipes/${id}`)
             return dispatch({
                 type: 'RECIPE_DETAIL',
                 payload: res.data
@@ -63,7 +66,7 @@ export function getrecipeDetail(id){
 export function postRecipes(payload){
     return async function(dispatch){
     try{
-        var res=await axios.post(`http://localhost:3001/recipes`, payload)
+        var res=await axios.post(`/recipes`, payload)
         return res
 } catch(error){
     console.log(error)

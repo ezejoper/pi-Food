@@ -7,6 +7,7 @@ import NavBar from "./NavBar";
 import Page from "./Page";
 import RecipesCard from './recipesCard';
 import SearchBar from "./SearchBar";
+import About from './About'
 import './styles/Home.css'
 
 
@@ -57,6 +58,10 @@ function handleFilterForDiet(e){
     setPaged(1)
     e.preventDefault()
 }
+const refres=(e)=>{
+    e.preventDefault()
+    window.location.reload()
+  }
 return(
     <div className="bodyHome">
         <NavBar/>
@@ -65,7 +70,7 @@ return(
         
         <div className="filterConteiner">
         <select className="SelectOrderTitle" onChange={e=>handleOrderByTitle(e)}>
-        <option>Seleccione el Orden</option>
+        <option value=''>Seleccione el Orden</option>
         <option value='Asc'>A - Z</option>
         <option value='Desc'>Z - A</option>
         </select>
@@ -75,6 +80,7 @@ return(
         <option value='HealthScorePointMax'>Puntaje Max</option>
         <option value='HealthScorePointMin'>Puntaje Min</option>
         </select>
+        
 
         <select className="dietfil" onChange={e=>handleFilterForDiet(e)}>
         <option value="">Seleccione Dieta</option>
@@ -83,7 +89,9 @@ return(
         })}
         </select>
         </div>
-
+        <div className="Paginado2">
+        
+        </div>
     <div className="Conteiner"> 
         
         {verRecipesPage?.map(recipe=>{
@@ -103,6 +111,7 @@ return(
     <div>
     <Page paged={paged}  setPaged={setPaged} max={max}/>
     </div>
+    <About/>
     </div>
 )
 

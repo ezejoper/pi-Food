@@ -1,4 +1,5 @@
 const { Router } = require('express');
+
 const router = Router();
 const{ getAllRecipes, searchById} =require('../contollers/recipes')
 const { Recipe }= require('../db')
@@ -67,4 +68,15 @@ router.post('/',async(req,res)=>{
         console.log(error)
     }
 })
+    router.delete('/delete/:idRecipe', async(req,res)=>{
+        try{
+            const {idRecipe}=req.params
+
+            await Recipe.destroy({
+                where:{id: idRecipe}
+            })
+            return res.status(200).send('Receta Eliminada')
+        
+        }catch(error){}
+    })
 module.exports=router

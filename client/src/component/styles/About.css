@@ -1,0 +1,22 @@
+.About{
+    padding-top: 1px;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+    color: white;
+    width: 100%;
+    font-size: 13px;
+}
+.gitImg{
+    
+    width: 28px;
+    margin-left: 20px;
+}
+.linkImg{
+    width: 28px;
+    margin-left: 5px;
+}
+.linkGit{
+    padding-bottom: 10px;
+    
+}

@@ -63,11 +63,16 @@ export default function RecipeCreate(){
             [e.target.name]: e.target.value
         }))
     }
-    function handleDelete(deleteT){
+    function handleDelete(e){
+        
         setPost({
             ...post,
-            diets: post.diets.filter(d=> d !== deleteT)
+            diets: post.diets.filter(d=> d !==e)
+
+
         })
+        
+       
     }
 
 
@@ -86,7 +91,7 @@ export default function RecipeCreate(){
             e.preventDefault()
             return alert('Agregue una dieta')
         }else {
-            if (!post.image) {
+            if (!post.image || post.image && ! /[(http(s)?)://(www.)?a-zA-Z0-9@:%.+~#=]{2,256}.[a-z]{2,6}\b([-a-zA-Z0-9@:%+.~#?&//=]*)/.test(post.image)) {
             post.image = "https://kravmaganewcastle.com.au/wp-content/uploads/2017/04/default-image-620x600.jpg"
                     }
         }   

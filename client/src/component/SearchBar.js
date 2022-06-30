@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { searchRecipe } from "../actions";
 import { useState } from "react";
@@ -9,16 +9,20 @@ export default  function SearchBar(){
     const dispatch = useDispatch()
     const [name, setName]= useState('')
 
+    
 
     function handleInputChange(e){
+        
         e.preventDefault()
         setName(e.target.value)
     }
 
     function handleSubmit(e){
+        
         e.preventDefault()
         dispatch(searchRecipe(name))
         setName("")
+        
     }
 
     return(
