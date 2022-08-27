@@ -24,7 +24,12 @@
 .imagend{
 width: 400px  !important ;
 height: 300px;
-
+}
+@media screen and (max-width: 800px) {
+    .imagend{
+        width: 300px !important ;
+        height: 200px;
+        }
 }
 .salud{
     text-align: center;

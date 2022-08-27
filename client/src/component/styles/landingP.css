@@ -30,3 +30,9 @@
 }
     .msg{font-size: 60px;
         font-family: 'Dancing Script', cursive;}
+
+        @media screen and (max-width: 600px) {
+            .msg{
+                font-size: 30px;
+            }
+        }

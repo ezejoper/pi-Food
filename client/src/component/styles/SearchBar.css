@@ -5,10 +5,11 @@
     /* background-color: rgb(249, 247, 247); */
     height: 20px;
     margin-bottom: 20px;
-    padding: 14px 0px 25px;
+    padding: 14px 0px 45px;
     background-color: black;
     opacity: 0.8;
 }
+
 .inputSearch{
     background-color:aliceblue;
     width: 340px;
@@ -36,4 +37,15 @@
 .boton:hover{
     background-color: rgb(94, 173, 14);
     cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    .inputSearch{
+        width: 100px;
+        height: 29.8px;
+    }
+    .boton{
+        width: 80px;
+        height: 29.8px;
+        font-size: 14px;
+    }
 }

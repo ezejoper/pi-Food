@@ -134,3 +134,8 @@ margin-right: 10px;
 margin-top: 10px;
 font-size: 12px;
 }
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 40px;
+    }
+}
